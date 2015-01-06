@@ -1,0 +1,13 @@
+. min_bmargin {
+    margin: 5px 0 0 0;
+}
+.navbar-inner{
+    background-color: #034482;
+    background-image:linear-gradient(to bottom,#04498c,#033c73);
+}
+.custom_div {
+    margin-bottom:5px;
+    padding:5px;
+    width:100%;
+    border:1px solid steelblue;
+}
