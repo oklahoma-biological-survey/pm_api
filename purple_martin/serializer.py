@@ -11,7 +11,7 @@ class LuSourceSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class RoostSerializer(serializers.HyperlinkedModelSerializer):
-    #source = LuSourceSerializer(required=True)
+    #source = LuSourceSerializer()
     class Meta:
         model = Roosts
         fields = ('url', 'name', 'soar_no', 'latitude', 'source','longitude', 'nex2004', 'loc_source_comment')
