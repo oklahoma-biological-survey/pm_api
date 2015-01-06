@@ -59,3 +59,5 @@ virtpy/
 config.py
 .idea/
 db.sqlite3
+static/admin/
+static/rest_framework/
