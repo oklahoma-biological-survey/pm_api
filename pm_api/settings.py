@@ -104,9 +104,9 @@ REST_FRAMEWORK = {
 
     ),
     #Pagination settings
-    #'PAGINATE_BY': 50,
-    #'PAGINATE_BY_PARAM': 'page_size',
-    #'MAX_PAGINATE_BY': 1000000
+    'PAGINATE_BY': 50,
+    'PAGINATE_BY_PARAM': 'page_size',
+    'MAX_PAGINATE_BY': 1000
 
 }
 # Internationalization

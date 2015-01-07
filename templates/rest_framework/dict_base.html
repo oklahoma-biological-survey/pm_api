@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% load rest_framework %}
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         {% block head %}
 
@@ -134,12 +134,21 @@
 
 </span></pre>
                             {% for items in content %}
-                                <Div  class="custom_div">
-                                <h4>{{ items.name }}</h4>
-                                <img src="http://static.cybercommons.org/favicon.ico">
-                                <a href="{{ items.url }}">{{ items.url }}</a>
-                                </Div>
-
+                                {% for key,value in items.items %}
+                                    {% if key == "results" %}
+                                        {% for item in value %}
+                                            <Div  class="custom_div">
+                                            <h4>{{ item.name }}</h4>
+                                            <p><b>Latitude:</b> {{ item.latitude }} <b>longitude:</b> {{ item.longitude }}</p>
+                                            <!--<img src="http://static.cybercommons.org/favicon.ico"/>-->
+                                            <img src="http://static.cybercommons.org/radar1.gif" />
+                                            {{ item.url|urlize_quoted_links }}
+                                            </Div>
+                                        {%  endfor %}
+                                    {%  else %}
+                                        <div class="meta_div"><b>{{ key }}</b>: {{ value|urlize_quoted_links }}<br></div>
+                                    {%  endif %}
+                                {% endfor %}
                             {% endfor %}
 
 
